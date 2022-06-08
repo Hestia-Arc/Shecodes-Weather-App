@@ -1,0 +1,47 @@
+.container {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: rgb(206, 182, 190);
+    max-width: 800px;
+    height: 30em;
+    margin: 10px 5em;
+    padding: 2em 5em;
+    color: rgb(136, 67, 67);
+    border-radius: 1.5em;
+  }
+  
+  .input-group {
+    width: 400px;
+    margin-top: 1em;
+  }
+  .weather {
+    margin-top: -1em;
+  }
+  h1 {
+    color: rgb(139, 69, 172);
+  }
+  .degree {
+    padding-left: 1em;
+    color: rgb(139, 69, 172);
+    font-size: 5em;
+    margin-top: -0.4em;
+  }
+  .wea {
+    font-size: 2em;
+  }
+  hr {
+    margin-left: -2em;
+  }
+  .letters {
+    font-size: 0.5em;
+  }
+  a {
+    text-decoration: none;
+  }
+  form {
+    display: inline;
+    display: flex;
+  }
+  #button-Up {
+    margin-left: 0.6em;
+  }
