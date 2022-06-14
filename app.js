@@ -70,9 +70,14 @@ function dateUp(date) {
     function showTemperature(response) {
       let apiTemp = response.data.main.temp;
       let finalTemp = Math.round(apiTemp);
+      
   
       let tempNumber = document.querySelector("#temp");
+      let weatherDescription = document.querySelector("#weather");
+ 
       tempNumber.innerHTML = finalTemp;
+      weatherDescription.innerHTML = response.data.weather[0].description;
+
     }
     let apiKey = "1c7c2130c641449415ec3a6426b1d986";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search.value}&units=metric`;
