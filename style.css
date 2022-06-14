@@ -14,8 +14,13 @@
     width: 400px;
     margin-top: 1em;
   }
-  .weather {
+  #weather {
     margin-top: -1em;
+    text-transform: capitalize;
+  }
+  #city {
+    text-transform: capitalize;
+    
   }
   h1 {
     color: rgb(139, 69, 172);
