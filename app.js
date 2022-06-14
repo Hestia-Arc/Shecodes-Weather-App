@@ -25,15 +25,17 @@
 
 //feature 1
 function dateUp(date) {
-    let hour = date.getHours();
+  let dateNtime = new Date(date);
+
+    let hour = dateNtime.getHours();
   
     if (hour < 10) {
-      hour = "0".concat(hour);
+      hour = `0${hour}`;
     }
-    let minutes = date.getMinutes();
+    let minutes = dateNtime.getMinutes();
   
     if (minutes < 10) {
-      minutes = "0".concat(minutes);
+      minutes = `0${minutes}`;
     }
   
     let weekArr = [
@@ -46,15 +48,13 @@ function dateUp(date) {
       "Saturday"
     ];
   
-    let week = weekArr[date.getDay()];
+    let week = weekArr[dateNtime.getDay()];
   
-    return "".concat(week, " ").concat(hour, ":").concat(minutes);
+    return `${week} ${hour}:${minutes}`;
   }
   
-  let dateNtime = new Date();
-  let date = document.querySelector("#formatDate");
+
   
-  date.innerHTML = dateUp(dateNtime);
   
   //feature 2
   function changeCity() {
@@ -74,9 +74,14 @@ function dateUp(date) {
   
       let tempNumber = document.querySelector("#temp");
       let weatherDescription = document.querySelector("#weather");
+      let date = document.querySelector("#formatDate");
+      
  
       tempNumber.innerHTML = finalTemp;
       weatherDescription.innerHTML = response.data.weather[0].description;
+      date.innerHTML = dateUp(response.data.dt * 1000);
+
+
 
     }
     let apiKey = "1c7c2130c641449415ec3a6426b1d986";
