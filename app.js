@@ -71,6 +71,7 @@ function dateUp(date) {
       let apiTemp = response.data.main.temp;
       let finalTemp = Math.round(apiTemp);
       
+      celTemp = finalTemp;
   
       let tempNumber = document.querySelector("#temp");
       let weatherDescription = document.querySelector("#weather");
@@ -95,27 +96,29 @@ function dateUp(date) {
   let button = document.querySelector("#form-up");
   
   button.addEventListener("submit", changeCity);
-  
-  /*feature 3
+
   //fraheinheit
-  function changeFra(event) {
+  function changeTempFra(event) {
     event.preventDefault();
     let temp = document.querySelector("#temp");
+    let fraCalculation = ( celTemp * 9 ) / 5 + 32;
   
-    temp.innerHTML = 66;
+    temp.innerHTML = Math.round(fraCalculation);
   }
+
+  let celTemp = null;
   let letterF = document.querySelector("#aFra");
-  letterF.addEventListener("click", changeFra);
+  letterF.addEventListener("click", changeTempFra);
   
   //celcius
   function changeCel(event) {
     event.preventDefault();
     let temp = document.querySelector("#temp");
   
-    temp.innerHTML = 17;
+    temp.innerHTML = celTemp;
   }
-  let letterC = document.querySelector("#aCel");
-  
+
+  let letterC = document.querySelector("#aCel"); 
   letterC.addEventListener("click", changeCel);
-  */
+  
   
