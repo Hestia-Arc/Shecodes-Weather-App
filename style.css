@@ -1,11 +1,14 @@
 .container {
+    display: flex;
+    flex-direction: column;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     background-color: rgb(206, 182, 190);
-    max-width: 700px;
-    height: 30em;
-    margin: 10px 5em;
-    padding: 2em 5em;
+    max-width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-top: 3em;
+    padding: 1em 2em;
     color: rgb(136, 67, 67);
     border-radius: 1.5em;
   }
@@ -14,8 +17,8 @@
     width: 400px;
     margin-top: 1em;
   }
-  #weather {
-    margin-top: -1em;
+  #weather, #wind {
+    margin-top: -0.8em;
     text-transform: capitalize;
   }
   #city {
@@ -35,7 +38,7 @@
     font-size: 2em;
   }
   hr {
-    margin-left: -2em;
+    margin-left: 0.4em;
   }
   .letters {
     font-size: 0.5em;
@@ -44,13 +47,20 @@
     text-decoration: none;
   }
   form {
-    display: inline;
     display: flex;
   }
   #button-Up {
     margin-left: 0.6em;
   }
   .source {
-    margin-top: 1.5em;
-    margin-left: -3em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-left: -2em;
+  }
+  .rows {
+    display: flex;
+    margin-left: 1.9em;
+    justify-content: space-around;
+    max-width: ;
+    max-height: ;
   }
