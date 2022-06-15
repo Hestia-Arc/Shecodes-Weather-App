@@ -77,14 +77,14 @@ function dateUp(date) {
       let weatherDescription = document.querySelector("#weather");
       let date = document.querySelector("#formatDate");
       let icon = document.querySelector("#icon");
-
+      let windSpeed = document.querySelector("#speed");
       
  
       tempNumber.innerHTML = finalTemp;
       weatherDescription.innerHTML = response.data.weather[0].description;
       date.innerHTML = dateUp(response.data.dt * 1000);
       icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
-
+      windSpeed.innerHTML = response.data.wind.speed;
 
 
     }
