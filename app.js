@@ -134,7 +134,7 @@ function displayForecast(response) {
     <div class="col-2">
         <div class="fore-day">${dayFormat(day.dt)}</div> 
         <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" width="40">
-        <p class="fore-temp">${Math.round(day.temp.day)}°C</p>
+        <p class="fore-temp">${Math.round(day.temp.day)}°</p>
     </div>
     `;
     }
