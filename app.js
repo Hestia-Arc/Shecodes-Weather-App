@@ -122,3 +122,31 @@ function dateUp(date) {
   letterC.addEventListener("click", changeCel);
   
   
+//forecast display
+
+function displayForecast() {
+  let forecastContainer = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function(day) {
+
+    forecastHTML = forecastHTML +  `
+    <div class="col-2">
+        <div class="fore-day">${day}</div> 
+        <p class="fore-img">🌩  </p>
+        <p class="fore-temp">20°C</p>
+    </div>
+    `;
+  })
+
+ 
+forecastHTML = forecastHTML + `</div>`
+
+  forecastContainer.innerHTML = forecastHTML;
+
+}
+
+displayForecast();
+
+

@@ -57,10 +57,13 @@
     margin-bottom: 0;
     margin-left: -2em;
   }
-  .rows {
+  .the-forecast {
+    text-align: center;
+  }
+  /* .rows {
     display: flex;
     margin-left: 1.9em;
     justify-content: space-around;
     max-width: ;
     max-height: ;
-  }
+  } */
